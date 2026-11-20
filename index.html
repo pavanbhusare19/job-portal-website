@@ -1,0 +1,137 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JobConnect - Find Your Dream Job</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="navbar">
+    <a href="#" class="logo">💼 Job<span>Connect</span></a>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#jobs">Jobs</a>
+        <a href="#post">Post a Job</a>
+        <a href="#applications">My Applications</a>
+        <a href="#about">About</a>
+    </nav>
+
+    <button class="login-btn" onclick="showLogin()">Login / Sign Up</button>
+</header>
+
+<section class="hero" id="home">
+    <div class="hero-content">
+        <h1>Find Your Dream Job<br>with <span>JobConnect</span></h1>
+        <p>Explore thousands of job opportunities and<br>
+        take the next step in your career.</p>
+
+        <div class="search-box">
+            <input type="text" id="searchInput"
+                   placeholder="Search jobs (e.g. Developer, AI Engineer...)">
+
+            <input type="text" id="locationInput"
+                   placeholder="Location">
+
+            <button onclick="searchJobs()">Search Jobs</button>
+        </div>
+
+        <div class="popular">
+            <b>Popular:</b>
+            <span onclick="quickSearch('Software Developer')">Software Developer</span>
+            <span onclick="quickSearch('Data Scientist')">Data Scientist</span>
+            <span onclick="quickSearch('Web Developer')">Web Developer</span>
+            <span onclick="quickSearch('Python Developer')">Python Developer</span>
+        </div>
+    </div>
+
+    <div class="hero-art">
+        <div class="art-card">🔎<br><strong>Find Your Future</strong></div>
+        <div class="person">👨🏻‍💻</div>
+        <div class="laptop">💻</div>
+    </div>
+</section>
+
+<main class="main-content" id="jobs">
+
+    <section class="job-section">
+        <div class="section-heading">
+            <h2>💼 Latest Job Openings</h2>
+            <span>Explore opportunities →</span>
+        </div>
+
+        <div id="jobList" class="job-list">
+            <p>Loading jobs...</p>
+        </div>
+    </section>
+
+    <aside class="sidebar" id="about">
+        <h2>⭐ Why Choose JobConnect?</h2>
+
+        <div class="benefit">
+            <span>⚡</span>
+            <div><h3>Thousands of Jobs</h3>
+            <p>Find the best opportunities</p></div>
+        </div>
+
+        <div class="benefit">
+            <span>🔄</span>
+            <div><h3>Easy Apply</h3>
+            <p>Apply in just a few clicks</p></div>
+        </div>
+
+        <div class="benefit">
+            <span>🔔</span>
+            <div><h3>Get Notified</h3>
+            <p>Never miss a job update</p></div>
+        </div>
+
+        <div class="benefit">
+            <span>🛡️</span>
+            <div><h3>Trusted Platform</h3>
+            <p>Your data is safe with us</p></div>
+        </div>
+
+        <div class="career-box">
+            🚀 Start Your Career Today!
+            <p>Join thousands of job seekers</p>
+        </div>
+    </aside>
+
+</main>
+
+<section class="post-section" id="post">
+    <h2>Are you hiring?</h2>
+    <p>Post your job and connect with talented candidates.</p>
+
+    <form id="jobForm">
+        <input id="company" placeholder="Company Name" required>
+        <input id="title" placeholder="Job Title" required>
+        <input id="jobLocation" placeholder="Job Location" required>
+        <input id="salary" placeholder="Salary (e.g. 5-8 LPA)" required>
+        <select id="jobType">
+            <option>Full Time</option>
+            <option>Part Time</option>
+            <option>Internship</option>
+        </select>
+        <button type="submit">Post Job</button>
+    </form>
+</section>
+
+<section class="applications" id="applications">
+    <h2>My Applications</h2>
+    <div id="applicationList">Your submitted applications will appear here.</div>
+</section>
+
+<footer>
+    <h2>💼 JobConnect</h2>
+    <p>Connecting talent with opportunity.</p>
+    <p>© 2026 JobConnect. All rights reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
